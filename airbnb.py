@@ -9,7 +9,13 @@ import warnings
 warnings.filterwarnings('ignore')
 
 st.set_page_config(page_title="AirBnb-Analysis by Anjali!!!", layout="wide")
-
+# SETTING-UP BACKGROUND IMAGE
+def setting_bg():
+    st.markdown(f""" <style>.stApp {{
+                        background: url("https://wallpapertag.com/wallpaper/middle/2/b/6/141489-best-travel-background-1920x1272-for-mac.jpg");
+                        background-size: cover}}
+                     </style>""",unsafe_allow_html=True)
+setting_bg()
 st.title(" AirBnb-Analysis")
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
@@ -33,6 +39,8 @@ SELECT = option_menu(
 if SELECT == "Home":
 
  st.header('Airbnb Analysis')
+ image = (Image.open("C:\\Users\\Anjali\\OneDrive\\Desktop\\1405623476-airbnb-logo-explanation.jpg"))
+ st.image(image, caption='Airbnb',use_column_width='auto')
  st.subheader("Airbnb is an American San Francisco-based company operating an online marketplace for short- and long-term homestays and experiences. The company acts as a broker and charges a commission from each booking. The company was founded in 2008 by Brian Chesky, Nathan Blecharczyk, and Joe Gebbia. Airbnb is a shortened version of its original name, AirBedandBreakfast.com. The company is credited with revolutionizing the tourism industry, while also having been the subject of intense criticism by residents of tourism hotspot cities like Barcelona and Venice for enabling an unaffordable increase in home rents, and for a lack of regulation.")
  st.subheader('Skills take away From This Project:')
  st.subheader('Python Scripting, Data Preprocessing, Visualization, EDA, Streamlit, MongoDb, PowerBI or Tableau')
